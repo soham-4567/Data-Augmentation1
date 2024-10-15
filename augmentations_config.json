@@ -1,0 +1,63 @@
+{
+    "augmentations": [
+        {
+            "name": "Rotate",
+            "params": {
+                "limit": 20,
+                "border_mode": 0,
+                "value": 0,
+                "p": 0.8
+            },
+            "loops": 0
+        },
+        {
+            "name": "GaussNoise",
+            "params": {
+                "var_limit": [10.0, 50.0],
+                "p": 0.5
+            },
+            "loops": 5
+        },
+        {
+            "name": "RandomBrightnessContrast",
+            "params": {
+                "p": 0.8
+            },
+            "loops": 3
+        },
+        {
+            "name": "HueSaturationValue",
+            "params": {
+                "p": 0.8
+            },
+            "loops": 7
+        },
+        {
+            "name": "Blur",
+            "params": {
+                "blur_limit": 3,
+                "p": 0.5
+            },
+            "loops": 5
+        },
+        {
+            "name": "ToGray",
+            "params": {
+                "p": 1.0
+            },
+            "loops": 6
+        },
+        {
+            "name": "RandomScale",
+            "params": {
+                "scale_limit": 0.2,
+                "p": 0.8
+            },
+            "loops": 7
+        }
+    ],
+    "bbox_params": {
+        "format": "yolo",
+        "label_fields": ["category_ids"]
+    }
+}
